@@ -1,0 +1,1095 @@
+{
+    "data": {
+        "esito": {
+            "data": {
+                "aggiudicatario": [
+                    {
+                        "CIG": "828187751",
+                        "aggiudicatario": "CNS-CONSORZIO NAZIONALE SERVIZI",
+                        "numero_lotto": "2"
+                    },
+                    {
+                        "aggiudicatario": "CNS-CONSORZIO NAZIONALE SERVIZI",
+                        "numero_lotto": "X"
+                    }
+                ],
+                "asset_assegnazione": [
+                    {
+                        "asset_in_assegnazione": [
+                            {}
+                        ],
+                        "numero_lotto": "X"
+                    },
+                    {
+                        "CIG": "666351173A",
+                        "asset_in_assegnazione": [
+                            {}
+                        ],
+                        "numero_lotto": "X"
+                    },
+                    {
+                        "CIG": "828187751A",
+                        "asset_in_assegnazione": [
+                            {}
+                        ],
+                        "numero_lotto": "X"
+                    },
+                    {
+                        "CIG": "828187751",
+                        "asset_in_assegnazione": [],
+                        "numero_lotto": "2"
+                    }
+                ],
+                "esito_punteggio_cns": [
+                    {
+                        "CIG": "828187751",
+                        "numero_lotto": "2",
+                        "posizione_graduatoria_economica_cns": 1,
+                        "punteggio_economico_cns": "39,95",
+                        "punteggio_economico_sottocriterio_cns": [],
+                        "punteggio_tecnico_cns": 55.37,
+                        "punteggio_tecnico_sottocriterio_cns": [
+                            {
+                                "punteggio": 40
+                            }
+                        ],
+                        "punteggio_totale": 95.32
+                    },
+                    {
+                        "numero_lotto": "X",
+                        "posizione_graduatoria_economica_cns": 1,
+                        "punteggio_economico_cns": "55,37",
+                        "punteggio_economico_sottocriterio_cns": [],
+                        "punteggio_tecnico_cns": 39.95,
+                        "punteggio_tecnico_sottocriterio_cns": [],
+                        "punteggio_totale": 95.32
+                    }
+                ],
+                "esito_punteggio_enti": [
+                    {
+                        "CIG": "828187751",
+                        "enti": [
+                            {
+                                "ente": "INNOVA",
+                                "posizione_graduatoria_economica_ente": 1,
+                                "posizione_graduatoria_tecnica_ente": 2,
+                                "punteggio_economico_ente": 40,
+                                "punteggio_economico_sottocriterio_ente": [],
+                                "punteggio_tecnico_ente": 54.02,
+                                "punteggio_tecnico_sottocriterio_ente": [],
+                                "punteggio_totale": 94.02
+                            },
+                            {
+                                "ente": "MARKAS S.r.l.",
+                                "posizione_graduatoria_economica_ente": 3,
+                                "posizione_graduatoria_tecnica_ente": 3,
+                                "punteggio_economico_ente": 39.31,
+                                "punteggio_economico_sottocriterio_ente": [],
+                                "punteggio_tecnico_ente": 49.04,
+                                "punteggio_tecnico_sottocriterio_ente": [],
+                                "punteggio_totale": 88.35
+                            },
+                            {
+                                "ente": "CAMST SOC. COOP.A R.L.",
+                                "posizione_graduatoria_economica_ente": 4,
+                                "posizione_graduatoria_tecnica_ente": 4,
+                                "punteggio_economico_ente": 39.41,
+                                "punteggio_economico_sottocriterio_ente": [],
+                                "punteggio_tecnico_ente": 37.17,
+                                "punteggio_tecnico_sottocriterio_ente": [],
+                                "punteggio_totale": 76.58
+                            },
+                            {
+                                "ente": "DUSSMANN SERVICE SRL",
+                                "posizione_graduatoria_economica_ente": 4,
+                                "posizione_graduatoria_tecnica_ente": 5,
+                                "punteggio_economico_ente": 39.41,
+                                "punteggio_economico_sottocriterio_ente": [],
+                                "punteggio_tecnico_ente": 33.02,
+                                "punteggio_tecnico_sottocriterio_ente": [],
+                                "punteggio_totale": 72.43
+                            },
+                            {
+                                "ente": "RTI FABBRO-SARCA CATERING",
+                                "posizione_graduatoria_economica_ente": 4,
+                                "posizione_graduatoria_tecnica_ente": 6,
+                                "punteggio_economico_ente": 39.41,
+                                "punteggio_economico_sottocriterio_ente": [],
+                                "punteggio_tecnico_ente": 25.56,
+                                "punteggio_tecnico_sottocriterio_ente": [],
+                                "punteggio_totale": 64.97
+                            }
+                        ],
+                        "numero_lotto": "2"
+                    },
+                    {
+                        "enti": [
+                            {
+                                "ente": "INNOVA",
+                                "posizione_graduatoria_economica_ente": 2,
+                                "posizione_graduatoria_tecnica_ente": 2,
+                                "punteggio_economico_ente": 54.02,
+                                "punteggio_economico_sottocriterio_ente": [],
+                                "punteggio_tecnico_ente": 40.0,
+                                "punteggio_tecnico_sottocriterio_ente": [],
+                                "punteggio_totale": 94.02
+                            },
+                            {
+                                "ente": "Markas srl",
+                                "posizione_graduatoria_economica_ente": 3,
+                                "posizione_graduatoria_tecnica_ente": 3,
+                                "punteggio_economico_ente": 49.04,
+                                "punteggio_economico_sottocriterio_ente": [],
+                                "punteggio_tecnico_ente": 39.31,
+                                "punteggio_tecnico_sottocriterio_ente": [],
+                                "punteggio_totale": 88.35
+                            },
+                            {
+                                "ente": "CANST SOC. COOP.A.R.L.",
+                                "posizione_graduatoria_economica_ente": 4,
+                                "posizione_graduatoria_tecnica_ente": 4,
+                                "punteggio_economico_ente": 37.17,
+                                "punteggio_economico_sottocriterio_ente": [],
+                                "punteggio_tecnico_ente": 39.41,
+                                "punteggio_tecnico_sottocriterio_ente": [],
+                                "punteggio_totale": 76.58
+                            },
+                            {
+                                "ente": "Dussmann Service SRL",
+                                "posizione_graduatoria_economica_ente": 5,
+                                "posizione_graduatoria_tecnica_ente": 5,
+                                "punteggio_economico_ente": 33.02,
+                                "punteggio_economico_sottocriterio_ente": [],
+                                "punteggio_tecnico_ente": 39.41,
+                                "punteggio_tecnico_sottocriterio_ente": [],
+                                "punteggio_totale": 72.43
+                            },
+                            {
+                                "ente": "FABBRO FOOD SPA",
+                                "posizione_graduatoria_economica_ente": 6,
+                                "posizione_graduatoria_tecnica_ente": 6,
+                                "punteggio_economico_ente": 25.56,
+                                "punteggio_economico_sottocriterio_ente": [],
+                                "punteggio_tecnico_ente": 39.41,
+                                "punteggio_tecnico_sottocriterio_ente": []
+                            }
+                        ],
+                        "numero_lotto": "X"
+                    }
+                ],
+                "numero_partecipanti": [
+                    {
+                        "CIG": "828187751",
+                        "numero_lotto": "2",
+                        "numero_partecipanti": "6"
+                    },
+                    {
+                        "numero_lotto": "X",
+                        "numero_partecipanti": "6"
+                    }
+                ],
+                "offerte_economiche": [
+                    {
+                        "CIG": "828187751",
+                        "enti": [
+                            {
+                                "ente": "CNS-CONSORZIO NAZIONALE SERVIZI",
+                                "offerte_economiche": 1919429.25
+                            },
+                            {
+                                "ente": "INNOVA",
+                                "offerte_economiche": 1916847.17
+                            },
+                            {
+                                "ente": "MARKAS S.r.l.",
+                                "offerte_economiche": 1950684.2
+                            },
+                            {
+                                "ente": "CAMST SOC. COOP.A R.L.",
+                                "offerte_economiche": 1945450.45
+                            },
+                            {
+                                "ente": "DUSSMANN SERVICE SRL",
+                                "offerte_economiche": 1945450.45
+                            },
+                            {
+                                "ente": "RTI FABBRO-SARCA CATERING",
+                                "offerte_economiche": 1945450.45
+                            }
+                        ],
+                        "numero_lotto": "2"
+                    },
+                    {
+                        "enti": [
+                            {
+                                "ente": "CNS-CONSORZIO NAZIONALE SERVIZI",
+                                "offerte_economiche": 1919429.25
+                            },
+                            {
+                                "ente": "INNOVA",
+                                "offerte_economiche": 1916847.17
+                            },
+                            {
+                                "ente": "Markas srl",
+                                "offerte_economiche": 1950684.2
+                            },
+                            {
+                                "ente": "CANST SOC. COOP.A.R.L.",
+                                "offerte_economiche": 1945450.45
+                            },
+                            {
+                                "ente": "Dussmann Service SRL",
+                                "offerte_economiche": 1945450.45
+                            },
+                            {
+                                "ente": "FABBRO FOOD SPA",
+                                "offerte_economiche": 1945450.45
+                            }
+                        ],
+                        "numero_lotto": "X"
+                    }
+                ],
+                "punteggio_economico_massimo": [
+                    {
+                        "CIG": "828187751",
+                        "numero_lotto": "2",
+                        "punteggio_economico_massimo": 40
+                    },
+                    {
+                        "numero_lotto": "X",
+                        "punteggio_economico_massimo": 55.37
+                    }
+                ],
+                "punteggio_tecnico_massimo": [
+                    {
+                        "CIG": "828187751",
+                        "numero_lotto": "2",
+                        "punteggio_tecnico_massimo": 60
+                    },
+                    {
+                        "numero_lotto": "X",
+                        "punteggio_tecnico_massimo": 40.0
+                    }
+                ],
+                "punteggio_totale_massimo": [
+                    {
+                        "CIG": "828187751",
+                        "numero_lotto": "2",
+                        "punteggio_totale_massimo": 100
+                    },
+                    {
+                        "numero_lotto": "X",
+                        "punteggio_totale_massimo": 95.32
+                    }
+                ],
+                "relazioni_tecniche": [
+                    {
+                        "CIG": "828187751",
+                        "enti": [
+                            {
+                                "ente": "CNS-CONSORZIO NAZIONALE SERVIZI"
+                            },
+                            {
+                                "ente": "INNOVA"
+                            },
+                            {
+                                "ente": "MARKAS S.r.l."
+                            },
+                            {
+                                "ente": "CAMST SOC. COOP.A R.L."
+                            },
+                            {
+                                "ente": "DUSSMANN SERVICE SRL"
+                            },
+                            {
+                                "ente": "RTI FABBRO-SARCA CATERING"
+                            }
+                        ],
+                        "numero_lotto": "2"
+                    },
+                    {
+                        "enti": [
+                            {
+                                "ente": "CNS-CONSORZIO NAZIONALE SERVIZI"
+                            },
+                            {
+                                "ente": "INNOVA"
+                            },
+                            {
+                                "ente": "Markas srl"
+                            },
+                            {
+                                "ente": "CAMST SOC. COOP.A.R.L."
+                            },
+                            {
+                                "ente": "Dussmann Service SRL"
+                            },
+                            {
+                                "ente": "FABBRO FOOD SPA"
+                            }
+                        ],
+                        "numero_lotto": "X"
+                    }
+                ]
+            },
+            "schema": {
+                "aggiudicatario": {
+                    "items": {
+                        "properties": {
+                            "CIG": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "aggiudicatario": {
+                                "description": "Nominativo aggiudicatario. Se si tratta di CNS (consorzio nazionale servizi) completa solo con CNS.",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "aggiudicazione_cns": {
+                                "description": "True se l'aggiudicatario Ã¨ CNS (consorzio nazionale servizi).",
+                                "type": [
+                                    "boolean",
+                                    "null"
+                                ]
+                            },
+                            "numero_lotto": {
+                                "description": "numero del lotto in questione, se non presente scrivi X.",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "asset_assegnazione": {
+                    "items": {
+                        "properties": {
+                            "CIG": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "asset_in_assegnazione": {
+                                "items": {
+                                    "properties": {
+                                        "importo_asset": {
+                                            "description": "Importo dell'asset in assegnazione.",
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ]
+                                        },
+                                        "nome_asset": {
+                                            "description": "Nome dell'asset attivato per la commessa.",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "numero_lotto": {
+                                "description": "Numero del lotto in questione, se non presente scrivi X.",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "esito_punteggio_cns": {
+                    "items": {
+                        "properties": {
+                            "CIG": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "numero_lotto": {
+                                "description": "numero del lotto in questione, se non presente scrivi X.",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "posizione_graduatoria_economica_cns": {
+                                "description": "numero che indica la posizione ottenuta dal cns nella graduatoria economica",
+                                "type": [
+                                    "number",
+                                    "null"
+                                ]
+                            },
+                            "punteggio_economico_cns": {
+                                "description": "punteggio economico ottenuto da cns",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "punteggio_economico_sottocriterio_cns": {
+                                "description": "per ogni sottocriterio economico indica il nome e il punteggio ottenuto",
+                                "items": {
+                                    "properties": {
+                                        "punteggio": {
+                                            "description": "punteggio ottenuto",
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ]
+                                        },
+                                        "sottocriterio_economico_nome": {
+                                            "description": "nome del sottocriterio economico",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "punteggio_tecnico_cns": {
+                                "description": "punteggio tecnico ottenuto da cns",
+                                "type": [
+                                    "number",
+                                    "null"
+                                ]
+                            },
+                            "punteggio_tecnico_sottocriterio_cns": {
+                                "description": "per ogni sottocriterio tecnico indica il nome e il punteggio ottenuto",
+                                "items": {
+                                    "properties": {
+                                        "punteggio": {
+                                            "description": "punteggio ottenuto",
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ]
+                                        },
+                                        "sottocriterio_tecnico_nome": {
+                                            "description": "nome del sottocriterio tecnico",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "punteggio_totale": {
+                                "description": "indica il punteggio totale ottenuto da cns",
+                                "type": [
+                                    "number",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "esito_punteggio_enti": {
+                    "items": {
+                        "properties": {
+                            "CIG": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "enti": {
+                                "description": "lista di enti",
+                                "items": {
+                                    "properties": {
+                                        "ente": {
+                                            "description": "nome ente",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        "posizione_graduatoria_economica_ente": {
+                                            "description": "numero che indica la posizione ottenuta dal ente nella graduatoria economica",
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ]
+                                        },
+                                        "posizione_graduatoria_tecnica_ente": {
+                                            "description": "numero che indica la posizione ottenuta dal ente nella graduatoria tecnica",
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ]
+                                        },
+                                        "punteggio_economico_ente": {
+                                            "description": "punteggio economico ottenuto da ente",
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ]
+                                        },
+                                        "punteggio_economico_sottocriterio_ente": {
+                                            "description": "per ogni sottocriterio economico indica il nome e il punteggio ottenuto",
+                                            "items": {
+                                                "properties": {
+                                                    "punteggio": {
+                                                        "description": "punteggio ottenuto",
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "sottocriterio_economico_nome": {
+                                                        "description": "nome del sottocriterio economico",
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "punteggio_tecnico_ente": {
+                                            "description": "punteggio tecnico ottenuto da ente",
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ]
+                                        },
+                                        "punteggio_tecnico_sottocriterio_ente": {
+                                            "description": "per ogni sottocriterio tecnico indica il nome e il punteggio ottenuto",
+                                            "items": {
+                                                "properties": {
+                                                    "punteggio": {
+                                                        "description": "punteggio ottenuto",
+                                                        "type": [
+                                                            "number",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "sottocriterio_tecnico_nome": {
+                                                        "description": "nome del sottocriterio tecnico",
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "punteggio_totale": {
+                                            "description": "indica il punteggio totale ottenuto da ente",
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ]
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "numero_lotto": {
+                                "description": "numero del lotto in questione, se non presente scrivi X.",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "numero_partecipanti": {
+                    "items": {
+                        "properties": {
+                            "CIG": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "numero_lotto": {
+                                "description": "numero del lotto in questione, se non presente scrivi X.",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "numero_partecipanti": {
+                                "description": "numero totale partecipanti al lotto",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "offerte_economiche": {
+                    "items": {
+                        "properties": {
+                            "CIG": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "enti": {
+                                "items": {
+                                    "properties": {
+                                        "ente": {
+                                            "description": "Nome dell'ente.",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        "offerte_economiche": {
+                                            "description": "Valore dell'offerta economica dell'ente.",
+                                            "type": [
+                                                "number",
+                                                "null"
+                                            ]
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "numero_lotto": {
+                                "description": "Numero del lotto in questione, se non presente scrivi X.",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "punteggio_economico_massimo": {
+                    "items": {
+                        "properties": {
+                            "CIG": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "numero_lotto": {
+                                "description": "Numero del lotto in questione, se non presente scrivi X.",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "punteggio_economico_massimo": {
+                                "description": "Punteggio economico massimo assegnato in generale per il lotto.",
+                                "type": [
+                                    "number",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "punteggio_tecnico_massimo": {
+                    "items": {
+                        "properties": {
+                            "CIG": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "numero_lotto": {
+                                "description": "Numero del lotto in questione, se non presente scrivi X.",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "punteggio_tecnico_massimo": {
+                                "description": "Punteggio tecnico massimo assegnato in generale per il lotto. Potrebbe essere indicato come OT.",
+                                "type": [
+                                    "number",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "punteggio_totale_massimo": {
+                    "items": {
+                        "properties": {
+                            "CIG": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "numero_lotto": {
+                                "description": "Numero del lotto in questione, se non presente scrivi X.",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "punteggio_totale_massimo": {
+                                "description": "Punteggio totale massimo assegnato in generale per il lotto.",
+                                "type": [
+                                    "number",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "relazioni_tecniche": {
+                    "items": {
+                        "properties": {
+                            "CIG": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "enti": {
+                                "items": {
+                                    "properties": {
+                                        "ente": {
+                                            "description": "Nome dell'ente.",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        },
+                                        "relazione_tecnica": {
+                                            "description": "Riassunto della relazione tecnica dell'ente.",
+                                            "type": [
+                                                "string",
+                                                "null"
+                                            ]
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "numero_lotto": {
+                                "description": "Numero del lotto in questione, se non presente scrivi X.",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            }
+        },
+        "pannello_bando": {
+            "data": {
+                "descrizione_bando": "Appalto Specifico per il servizio di ristorazione presso il Presidio Ospedaliero di Menaggio",
+                "importi": {
+                    "ordinario": 1950684.2,
+                    "straordinario": 7862125.7
+                },
+                "link": "www.arca.regione.lombardia.it",
+                "oggetto_bando": "Servizio di ristorazione per il Presidio Ospedaliero di Menaggio",
+                "stazione_appaltante": "ASST Lariana",
+                "termine_offerte": "13.06.2016",
+                "tipo_procedura": "Aperta"
+            },
+            "schema": {
+                "descrizione_bando": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "importi": {
+                    "properties": {
+                        "canone": {
+                            "type": [
+                                "number",
+                                "null"
+                            ]
+                        },
+                        "canone_annuo": {
+                            "type": [
+                                "number",
+                                "null"
+                            ]
+                        },
+                        "extra_canone": {
+                            "type": [
+                                "number",
+                                "null"
+                            ]
+                        },
+                        "extra_canone_annuo": {
+                            "type": [
+                                "number",
+                                "null"
+                            ]
+                        },
+                        "manodopera_annuo": {
+                            "type": [
+                                "number",
+                                "null"
+                            ]
+                        },
+                        "manodopera_complessiva": {
+                            "type": [
+                                "number",
+                                "null"
+                            ]
+                        },
+                        "massimo_contrattuale": {
+                            "type": [
+                                "number",
+                                "null"
+                            ]
+                        },
+                        "ordinario": {
+                            "type": [
+                                "number",
+                                "null"
+                            ]
+                        },
+                        "ordinario_annuo": {
+                            "type": [
+                                "number",
+                                "null"
+                            ]
+                        },
+                        "ribassabile": {
+                            "type": [
+                                "number",
+                                "null"
+                            ]
+                        },
+                        "straordinario": {
+                            "type": [
+                                "number",
+                                "null"
+                            ]
+                        },
+                        "straordinario_annuo": {
+                            "type": [
+                                "number",
+                                "null"
+                            ]
+                        }
+                    },
+                    "type": "object"
+                },
+                "link": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "oggetto_bando": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "stazione_appaltante": {
+                    "description": "Il nome della stazione appaltante",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "termine_offerte": {
+                    "description": "Qual Ã¨ la data (format: YYYY-MM-DDTHH:mm:ss) di termine per il ricevimento delle offerte o delle domande di partecipazione",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "tipo_procedura": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            }
+        },
+        "scheda_iniziativa": {
+            "data": {
+                "lotti_partecipati_cns": [
+                    {
+                        "numero_lotto": "X"
+                    },
+                    {
+                        "CIG": "666351173A",
+                        "numero_lotto": "X"
+                    },
+                    {
+                        "CIG": "828187751A",
+                        "numero_lotto": "X",
+                        "partecipazione_cns": true
+                    }
+                ],
+                "partecipazione_autonoma": true,
+                "quota_consortile": 2
+            },
+            "schema": {
+                "denominazione_legale_partner_RTI": {
+                    "items": {
+                        "properties": {
+                            "CIG": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "contatti_legali_partner_RTI": {
+                                "description": "Contatti dei rappresentanti legali dei referenti dei partner RTI",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "contatti_referenti_partner_RTI": {
+                                "description": "Contatti dei referenti dei partner RTI",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "denominazione_legale_partner_RTI": {
+                                "description": "La denominazione legale del partner RTI",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "legali_partner_RTI": {
+                                "description": "Rappresentanti legali dei partner RTI",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "numero_lotto": {
+                                "description": "Numero del lotto in questione, se non presente scrivi X.",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "referenti_partner_RTI": {
+                                "description": "I referenti dei partner RTI",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "lotti_partecipati_cns": {
+                    "items": {
+                        "properties": {
+                            "CIG": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "numero_lotto": {
+                                "description": "Numero del lotto in questione, se non presente scrivi X.",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "partecipazione_cns": {
+                                "description": "Indica se CNS partecipa oppure no al lotto.",
+                                "type": [
+                                    "boolean",
+                                    "null"
+                                ]
+                            },
+                            "stato_partecipazione": {
+                                "description": "Stato della partecipazione di CNS allo specifico lotto.",
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "partecipazione_autonoma": {
+                    "description": "Se il CNS partecipa in forma autonoma (No RTI).",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "quota_consortile": {
+                    "description": "Quota dell'Onere Consortile.",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "quota_perc_rti_ati": {
+                    "description": "Quota di ripartizione percentuale del RTI/ATI di CNS.",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                }
+            }
+        }
+    },
+    "errors": [],
+    "message": "PL analysis result."
+}
