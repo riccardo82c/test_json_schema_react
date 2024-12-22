@@ -1,7 +1,10 @@
 import Form from '@rjsf/core'
 import type { RJSFSchema, UiSchema } from '@rjsf/utils'
+
 import validator from '@rjsf/validator-ajv8'
 import esempio_dettaglio from '../data/esempio_dettaglio.json'
+/* import customizeValidator from '@rjsf/validator-ajv8'
+import localizer from 'ajv-i18n' */
 
 console.log('esempio_dettaglio', esempio_dettaglio.data.scheda_iniziativa)
 
@@ -17,12 +20,46 @@ interface ProcessedSchema {
  * @returns Oggetto contenente schema corretto e uiSchema
  */
 
-const scheda_iniziativa = esempio_dettaglio.data.scheda_iniziativa.schema
+const ArrayFieldTemplate = (props: any) => {
+  return (
+    <div className="array-field-container">
+      <div>{props.title}</div>
+      <div>{props.description}</div>
+      {props.items.map((element: any) => (
+        <div key={element.key} className="array-item">
+          {element.children}
+          {props.uiSchema.removable !== false && (
+            <button
+              type="button"
+              className="array-item-remove"
+              onClick={element.onDropIndexClick(element.index)}
+            >
+              Rimuovi
+            </button>
+          )}
+        </div>
+      ))}
+      {props.canAdd && (
+        <button
+          type="button"
+          className="array-item-add"
+          onClick={props.onAddClick}
+        >
+          {props.uiSchema["ui:title"] || "Aggiungi elemento"}
+        </button>
+      )}
+    </div>
+  )
+}
 
-const processSchema = (schema: Record<string, any>): ProcessedSchema => {
+const processSchema = (
+  schema: Record<string, any>,
+  initialData?: Record<string, any>
+): ProcessedSchema => {
   const processProperties = (
     properties: Record<string, any>,
-    uiSchema: UiSchema = {}
+    uiSchema: UiSchema = {},
+    data?: Record<string, any>
   ): {
     properties: Record<string, any>
     uiSchema: UiSchema
@@ -30,44 +67,63 @@ const processSchema = (schema: Record<string, any>): ProcessedSchema => {
     const newProperties: Record<string, any> = {}
 
     for (const [key, value] of Object.entries(properties)) {
-      // Processiamo le properties
       const newProperty = { ...value }
+      const fieldData = data?.[key]
 
-      // Correggiamo i tipi array rimuovendo null
       if (Array.isArray(newProperty.type)) {
         newProperty.type = newProperty.type.filter(t => t !== 'null')[0] || 'string'
       }
 
-      // Aggiungiamo il title se manca
       if (!newProperty.title) {
         newProperty.title = key.split('_').map(word =>
           word.charAt(0).toUpperCase() + word.slice(1)
         ).join(' ')
       }
 
-      // Processiamo ricorsivamente gli array
       if (newProperty.type === 'array' && newProperty.items) {
-        // Processiamo le properties dentro items
         if (newProperty.items.properties) {
-          const { properties: subProperties, uiSchema: subUiSchema } = processProperties(newProperty.items.properties)
+          const { properties: subProperties, uiSchema: subUiSchema } = processProperties(
+            newProperty.items.properties
+          )
+
           newProperty.items = {
             type: 'object',
-            properties: subProperties
+            properties: subProperties,
+            required: Object.keys(subProperties)
           }
+
           uiSchema[key] = {
-            items: subUiSchema
+            ...subUiSchema,
+            "ui:title": `Aggiungi ${newProperty.title}`,
+            "ui:description": `Lista ${newProperty.title}`,
+            classNames: "array-field-wrapper",
+            removable: true,
+            addable: true
+          }
+
+          if (Array.isArray(fieldData) && fieldData.length > 0) {
+            newProperty.default = fieldData
           }
         }
       }
-      // Processiamo ricorsivamente gli oggetti
       else if (newProperty.type === 'object' && newProperty.properties) {
-        const { properties: subProperties, uiSchema: subUiSchema } = processProperties(newProperty.properties)
+        const { properties: subProperties, uiSchema: subUiSchema } = processProperties(
+          newProperty.properties,
+          {},
+          fieldData
+        )
         newProperty.properties = subProperties
         uiSchema[key] = subUiSchema
       }
-      // Aggiungiamo la classe per i campi semplici
       else {
-        uiSchema[key] = { classNames: 'detail-item-class' }
+        uiSchema[key] = {
+          classNames: 'detail-item-class',
+          "ui:emptyValue": ""
+        }
+
+        if (fieldData !== undefined) {
+          newProperty.default = fieldData
+        }
       }
 
       newProperties[key] = newProperty
@@ -76,199 +132,39 @@ const processSchema = (schema: Record<string, any>): ProcessedSchema => {
     return { properties: newProperties, uiSchema }
   }
 
-  // Processiamo lo schema principale
-  const { properties, uiSchema } = processProperties(schema)
-
-  // Creiamo lo schema corretto
-  const correctSchema: RJSFSchema = {
-    type: 'object',
-    properties
-  }
+  const { properties, uiSchema } = processProperties(schema, {}, initialData)
 
   return {
-    correctSchema,
+    correctSchema: {
+      type: 'object',
+      properties,
+      // required: Object.keys(properties)
+    },
     uiSchema
   }
 }
 
-const { correctSchema, uiSchema } = processSchema(scheda_iniziativa)
+const { correctSchema, uiSchema } = processSchema(esempio_dettaglio.data.scheda_iniziativa.schema, esempio_dettaglio.data.scheda_iniziativa.data)
 
 console.log('correctSchema', correctSchema)
 
-const schema2: RJSFSchema = esempio_dettaglio
-
-/* const schema: RJSFSchema = {
-  title: 'Todo',
-  type: 'object',
-  required: ['title'],
-  properties: {
-    title: { type: 'string', title: 'Title', default: 'A new task' },
-    done: { type: 'boolean', title: 'Done?', default: false },
-  },
-} */
-
-
-
-const log = (type: any) => console.log.bind(console, type)
-
-const schema: RJSFSchema = {
-  "type": "object",
-  "properties": {
-    "denominazione_legale_partner_RTI": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "CIG": {
-            "type": "string",
-            "title": "CIG"
-          },
-          "contatti_legali_partner_RTI": {
-            "type": "string",
-            "title": "Contatti legali partner RTI",
-            "description": "Contatti dei rappresentanti legali dei referenti dei partner RTI"
-          },
-          "contatti_referenti_partner_RTI": {
-            "type": "string",
-            "title": "Contatti referenti partner RTI",
-            "description": "Contatti dei referenti dei partner RTI"
-          },
-          "denominazione_legale_partner_RTI": {
-            "type": "string",
-            "title": "Denominazione legale partner RTI",
-            "description": "La denominazione legale del partner RTI"
-          },
-          "legali_partner_RTI": {
-            "type": "string",
-            "title": "Legali partner RTI",
-            "description": "Rappresentanti legali dei partner RTI"
-          },
-          "numero_lotto": {
-            "type": "string",
-            "title": "Numero lotto",
-            "description": "Numero del lotto in questione, se non presente scrivi X."
-          },
-          "referenti_partner_RTI": {
-            "type": "string",
-            "title": "Referenti partner RTI",
-            "description": "I referenti dei partner RTI"
-          }
-        }
-      }
-    },
-    "lotti_partecipati_cns": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "CIG": {
-            "type": "string",
-            "title": "CIG"
-          },
-          "numero_lotto": {
-            "type": "string",
-            "title": "Numero lotto",
-            "description": "Numero del lotto in questione, se non presente scrivi X."
-          },
-          "partecipazione_cns": {
-            "type": "boolean",
-            "title": "Partecipazione CNS",
-            "description": "Indica se CNS partecipa oppure no al lotto."
-          },
-          "stato_partecipazione": {
-            "type": "string",
-            "title": "Stato partecipazione",
-            "description": "Stato della partecipazione di CNS allo specifico lotto."
-          }
-        }
-      }
-    },
-    "partecipazione_autonoma": {
-      "type": "boolean",
-      "title": "Partecipazione autonoma",
-      "description": "Se il CNS partecipa in forma autonoma (No RTI)."
-    },
-    "quota_consortile": {
-      "type": "number",
-      "title": "Quota consortile",
-      "description": "Quota dell'Onere Consortile."
-    },
-    "quota_perc_rti_ati": {
-      "type": "number",
-      "title": "Quota percentuale RTI/ATI",
-      "description": "Quota di ripartizione percentuale del RTI/ATI di CNS."
-    }
-  }
-}
-
-
-const formData = {
-  title: 'First task',
-  done: true,
-}
-
-console.log('ciccia', schema)
-
-/* const uiSchema: UiSchema = {
-  "CIG": {
-    "ui:classNames": "detail-item-class",
-    "ui:autofocus": false,
-    "ui:emptyValue": "",
-    "ui:placeholder": "placeholder",
-    "ui:autocomplete": "family-name",
-    "ui:enableMarkdownInDescription": true,
-  },
-
-  "numero_lotto": {
-    "ui:autofocus": false,
-    "ui:emptyValue": "",
-    "ui:placeholder": "placeholder",
-    "ui:autocomplete": "family-name",
-    "ui:enableMarkdownInDescription": true,
-    "ui:classNames": "detail-item-class"
-  },
-
-  "partecipazione_cns": {
-    "ui:autofocus": false,
-    "ui:emptyValue": "",
-    "ui:placeholder": "placeholder",
-    "ui:autocomplete": "family-name",
-    "ui:enableMarkdownInDescription": true,
-    "ui:classNames": "detail-item-class"
-  },
-
-  "stato_partecipazione": {
-    "ui:autofocus": false,
-    "ui:emptyValue": "",
-    "ui:placeholder": "placeholder",
-    "ui:autocomplete": "family-name",
-    "ui:enableMarkdownInDescription": true,
-    "ui:classNames": "detail-item-class"
-  }
-} */
-
-
-
 export default function Schema() {
+
   return (
     <>
       <Form
-        uiSchema={uiSchema}
         schema={correctSchema}
-        formData={formData}
+        uiSchema={uiSchema}
+        formData={esempio_dettaglio.data.scheda_iniziativa.data}
+        onSubmit={({ formData }) => console.log(formData)}
         validator={validator}
-        onChange={log('changed')}
-        onSubmit={log('submitted')}
-        onError={log('errors')}
+        noHtml5Validate
+        // Assicurati di usare il tema corretto
+        templates={{
+          ArrayFieldTemplate
+        }}
       />
 
-      {/*       <Form
-        schema={schema2.data.scheda_iniziativa.schema.lotti_partecipati_cns}
-        validator={validator}
-        onChange={log('changed')}
-        onSubmit={log('submitted')}
-        onError={log('errors')}
-      /> */}
     </>
   )
 }
