@@ -15,6 +15,7 @@
     "@rjsf/core": "^5.23.2",
     "@rjsf/utils": "^5.23.2",
     "@rjsf/validator-ajv8": "^5.23.2",
+    "ajv-i18n": "^4.2.0",
     "isbot": "^5.1.17",
     "match-sorter": "^8.0.0",
     "react": "^19.0.0",
