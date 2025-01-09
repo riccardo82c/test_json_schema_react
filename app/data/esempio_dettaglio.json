@@ -6,7 +6,8 @@
                     {
                         "CIG": "828187751",
                         "aggiudicatario": "CNS-CONSORZIO NAZIONALE SERVIZI",
-                        "numero_lotto": "2"
+                        "numero_lotto": "2",
+                        "aggiudicazione_cns": true
                     },
                     {
                         "aggiudicatario": "CNS-CONSORZIO NAZIONALE SERVIZI",

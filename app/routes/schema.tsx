@@ -3,6 +3,7 @@ import type { RJSFSchema, UiSchema } from '@rjsf/utils'
 import validator from '@rjsf/validator-ajv8'
 import { italianLocalizer } from '../localizer'
 import esempio_dettaglio from '../data/esempio_dettaglio.json'
+import { useState } from 'react'
 
 interface ProcessedSchema {
   correctSchema: RJSFSchema
@@ -81,7 +82,8 @@ const processSchema = (
           "ui:description": `Lista ${newProperty.title}`,
           "ui:classNames": "array-field-wrapper",
           removable: true,
-          addable: true
+          addable: true,
+
         }
 
         if (Array.isArray(fieldData) && fieldData.length > 0) {
@@ -124,21 +126,48 @@ const processSchema = (
 }
 
 const { correctSchema, uiSchema } = processSchema(
-  esempio_dettaglio.data.scheda_iniziativa.schema,
-  esempio_dettaglio.data.scheda_iniziativa.data
+  esempio_dettaglio.data.esito.schema,
+  esempio_dettaglio.data.esito.data
 )
 
+// Custom Submit Button Template
+const CustomSubmitButton = (props: any) => {
+  const [buttonText, setButtonText] = useState("Salva")
+
+  return (
+    <div className="custom-submit-wrapper">
+      <button
+        type="submit"
+        className={props.className}
+        disabled={props.disabled}
+        onClick={() => {
+          setButtonText("Elaborazione...")
+          setTimeout(() => {
+            setButtonText("Salvato!")
+          }, 2000)
+        }}
+      >
+        {buttonText}
+      </button>
+    </div>
+  )
+}
+
 export default function Schema() {
+
   return (
     <Form
       schema={correctSchema}
       uiSchema={uiSchema}
-      formData={esempio_dettaglio.data.scheda_iniziativa.data}
+      formData={correctSchema}
       onSubmit={({ formData }) => console.log(formData)}
       validator={validator}
       noHtml5Validate
       transformErrors={italianLocalizer}
       templates={{
+        ButtonTemplates: {
+          SubmitButton: CustomSubmitButton  // Changed this line
+        },
         ArrayFieldTemplate
       }}
       showErrorList={false}
